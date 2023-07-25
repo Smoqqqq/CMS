@@ -1,0 +1,25 @@
+{% extends 'back/layout.html.twig' %}
+
+{% block title %}Hello pageController!
+{% endblock %}
+
+{% block content %}
+
+	<div class="container">
+		<h1>Ajouter un page</h1><hr>
+
+		<div class="mt-5"></div>
+
+		{{ form_start(form) }}
+
+		{{ form_widget(form) }}
+
+		<button type="submit" class="button ms-auto">
+			<span>Ajouter</span>
+		</button>
+
+		{{ form_end(form) }}
+
+	</div>
+
+{% endblock %}

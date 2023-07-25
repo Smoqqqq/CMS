@@ -1,0 +1,35 @@
+{% extends 'back/layout.html.twig' %}
+
+{% block title %}Tous les blocs récurrents
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row mb-5">
+			<div class="col-md-8">
+				<h1>Tous les blocs récurrents</h1>
+			</div>
+			<div class="col-md-4 text-end">
+				<a href="{{ path("app_back_recurrent_block_choose") }}" class="button float-end">
+					<span>Ajouter</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="row">
+			{% for bloc in blocks %}
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-body">
+							<h3>{{ bloc.type }}</h3>
+							<ul>
+								<li>Position: {{ bloc.position == "above" ? "au dessus du contenu" : "en dessous du contenu" }}</li>
+							</ul>
+                            <a href="{{ path("app_back_recurrent_block_edit", { id : bloc.id }) }}" class="btn btn-primary float-end"><span>Modifier</span></a>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

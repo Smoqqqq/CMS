@@ -1,0 +1,18 @@
+<nav id="navbar">
+	<div class="container">
+		<a href="{{ path("app_back_page_search") }}" id="nav-logo">Back-office</a>
+		<div id="nav">
+			<div class="container">
+				<a href="{{ path("app_back_recurrent_block_search") }}">Blocs récurrents</a>
+				<a href="{{ path("app_back_page_search") }}">Pages</a>
+				<div class="divider"></div>
+				<a href="{{ path("app_logout") }}">Se déconnecter</a>
+			</div>
+		</div>
+		<div id="navbar-toggle" onclick="document.getElementById('navbar').classList.toggle('open')">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+</nav>

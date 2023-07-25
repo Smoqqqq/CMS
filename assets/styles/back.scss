@@ -1,0 +1,168 @@
+@import "bootstrap";
+@import "variables";
+
+.vich-image {
+    img {
+        max-width: 100%;
+    }
+}
+
+.block-icons {
+    background: #eee;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    color: black;
+    margin: 15px 0px;
+    text-decoration: none;
+    transition: $transition;
+    padding: 25px;
+    font-size: 18px;
+    font-weight: 500;
+
+    .icons {
+        font-size: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        img {
+            margin: 0px 10px 5px 10px;
+            height: 100px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        svg {
+            margin: 20px 10px 45px 10px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        color: var(--theme);
+    }
+}
+
+#flash-container {
+    position: fixed;
+    left: 25px;
+    top: 120px;
+    width: fit-content;
+}
+
+#nav {
+    .container {
+        a {
+            &:last-child {
+                padding-right: 0px !important;
+            }
+        }
+    }
+}
+
+.preview {
+    background: #ccc;
+    padding: 50px 50px;
+    margin: 50px auto;
+}
+
+.page-bloc {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 15px;
+
+    .page-edit {
+        display: flex;
+        flex-direction: row;
+        border: 2px solid #ccc;
+        width: fit-content;
+        background: #ccc;
+        position: absolute;
+        left: -1px;
+        top: -48px;
+
+        a {
+            cursor: pointer;
+            color: black;
+            text-decoration: none;
+            padding: 10px 25px;
+
+            &:hover {
+                background: white;
+            }
+
+            &.danger {
+                &:hover {
+                    background: #dc3545;
+                    color: white;
+                }
+            }
+        }
+
+        .position-toggle {
+            position: relative;
+            cursor: pointer;
+
+            .position-title {
+                padding: 10px 25px;
+            }
+
+            .position-body {
+                position: absolute;
+                left: 0px;
+                top: 100%;
+                width: 100%;
+                background: #ccc;
+                opacity: 0;
+                pointer-events: none;
+                transition: $transition;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #ccc;
+
+                a {
+                    display: block;
+                    margin: 0px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+            }
+
+            &:hover {
+                .position-body {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+
+            &:hover {
+                .position-title {
+                    background: white;
+                }
+            }
+        }
+    }
+
+    .col-md-6 {
+        &:first-child {
+            @media (max-width: $mobile) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+#navbar {
+    .divider {
+        width: 40px;
+        background: black;
+        height: 2px;
+        margin: 5px 20px;
+    }
+}

@@ -1,0 +1,24 @@
+{% if navbar is not null %}
+	<nav id="navbar" style="background: {{ navbar.block.currentBlock.backgroundColor }}">
+		<div class="container">
+			<a href="{{ path("app_home") }}" id="nav-logo">CMS</a>
+			<div id="nav">
+				<div class="container" style="justify-content: {{ navbar.block.currentBlock.linkAlignment }}">
+					{% for link in navbar.block.currentBlock.links %}
+						<a href="{{ link.page.url }}">{{ link.title }}</a>
+					{% endfor %}
+					<div id="navbar-nav-toggle" onclick="document.getElementById('navbar').classList.toggle('open')">
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<div id="navbar-toggle" onclick="document.getElementById('navbar').classList.toggle('open')">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</nav>
+
+{% endif %}

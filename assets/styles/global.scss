@@ -1,0 +1,256 @@
+:root {
+    font-family: $font-family;
+    font-weight: 300;
+    box-sizing: border-box;
+    --swiper-theme-color: white;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: calc(100vh - 167px);
+    padding-top: 167px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.placeholder {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.075);
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "PLACEHOLDER";
+        font-size: 40px;
+        color: rgba(0, 0, 0, 0.075);
+        bottom: 0px;
+        right: 20px;
+        font-weight: bold;
+
+        @media (max-width: 768px) {
+            font-size: 40px;
+        }
+    }
+}
+
+p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+.container {
+    @media (max-width: $mobile) {
+        max-width: calc(100% - 30px);
+    }
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mt-100,
+.page-bloc {
+    margin-top: 50px;
+}
+
+.page-bloc {
+    .col-md-6 {
+        &:first-child {
+            @media (max-width: $mobile) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: $mobile) {
+    .py-lg-6 {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .mt-100,
+    .page-bloc {
+        margin-top: 100px;
+    }
+}
+
+.simple-link, .text-block a {
+    color: var(--theme);
+    text-decoration: none;
+    font-weight: 600;
+
+    position: relative;
+
+    &::after {
+        left: 0px;
+        top: calc(100% - 2px);
+        content: "";
+        background: var(--theme);
+        height: 2px;
+        width: 100%;
+        transition: $transition;
+        position: absolute;
+    }
+
+    &:hover {
+        &::after {
+            height: 100%;
+            opacity: 0.2;
+            top: -1px;
+        }
+    }
+}
+
+.form-control {
+    padding: 10px;
+    border: 2px solid #c9c9c9;
+    background: white;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0);
+    transition: $transition;
+    width: calc(100% - 20px);
+    display: block;
+
+    &:active,
+    &:focus {
+        border-color: #a0a0a0;
+        box-shadow: 0px 0px 0px 2px #a0a0a0;
+    }
+}
+
+.center-y {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    @media (max-width: $mobile) {
+        margin-top: 50px;
+    }
+
+    @media (max-width: 450px) {
+        .btn {
+            padding: 7px 20px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        flex-direction: column;
+        align-items: center;
+
+        .btn {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.bg-grey {
+    background: #f3f4f6;
+}
+
+.persona {
+    @media (min-width: $mobile) {
+        .col-md-4 {
+            padding-right: 0px;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-bottom: 7px;
+    }
+}
+
+.bg-grey {
+    padding: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+        margin: 0px;
+    }
+
+    @media (max-width: $mobile) {
+        height: fit-content !important;
+    }
+}
+
+.empathy-map {
+    .col-md-6 {
+        flex-grow: 1;
+
+        .bg-grey {
+            height: calc(100% - 115px);
+        }
+
+        @media (min-width: $mobile) {
+            &:first-child {
+                padding-right: 7.5px;
+            }
+            &:nth-child(2) {
+                padding-left: 7.5px;
+            }
+        }
+    }
+}
+
+#error-page {
+    text-align: center;
+
+    h1 {
+        font-size: 20vw;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: var(--theme);
+        line-height: 24vw;
+    }
+
+    a {
+        margin: 30px auto;
+    }
+}
+
+.mb-spacer {
+    margin-bottom: 100px;
+
+    @media (max-width: $mobile) {
+        margin-bottom: 50px;
+    }
+}
+
+.single-link-block {
+    margin-top: -75px;
+}
+
+.theme {
+    color: var(--theme);
+}

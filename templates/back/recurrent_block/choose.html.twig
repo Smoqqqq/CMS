@@ -1,0 +1,12 @@
+{% extends 'back/layout.html.twig' %}
+
+{% block title %}Tous les blocs récurrents
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<h1 class="mb-5">Choisissez le type de bloc à ajouter</h1>
+
+		<a href="{{ path("app_back_recurrent_block_create", {type: "navbar" }) }}" class="rec_block_prev">Navbar</a>
+	</div>
+{% endblock %}

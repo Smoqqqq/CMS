@@ -1,0 +1,17 @@
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../node_modules/bootstrap/scss/helpers/position";
+@import "~swiper/scss";
+@import "~swiper/scss/navigation";
+
+@import "variables";
+
+@import "global";
+@import "elem/navbar";
+@import "elem/btn";
+@import "elem/faq";
+@import "elem/page-preview";
+@import "elem/page";
+@import "elem/page-grid";
+@import "elem/footer";
+@import "elem/swiper";
+// @import "elem/cursor";

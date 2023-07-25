@@ -1,0 +1,29 @@
+{% extends 'back/layout.html.twig' %}
+
+{% block title %}Créer un bloc récurent
+{% endblock %}
+
+{% block content %}
+	<div class="container py-5">
+		<h1>{{ action }} un bloc récurrent : <span class="theme">{{ type }}</span></h1>
+		{{ form_start(form) }}
+
+		{{ form_widget(form) }}
+
+		<div id="dynamic-content-block"></div>
+
+		{% if form.links %}
+			<button class="button" type="button" id="navbar_block_add_link">
+				<span>Ajouter un lien</span>
+			</button>
+		{% endif %}
+
+		<div class="text-end">
+			<button type="submit" class="button ms-auto">
+				<span>Enregistrer</span>
+			</button>
+		</div>
+
+		{{ form_end(form) }}
+	</div>
+{% endblock %}

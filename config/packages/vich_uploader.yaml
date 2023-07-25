@@ -1,0 +1,57 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        page:
+            uri_prefix: /images/pages
+            upload_destination: "%kernel.project_dir%/public/images/pages"
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: true
+
+        image_block:
+            uri_prefix: /images/image_block
+            upload_destination: "%kernel.project_dir%/public/images/image_block"
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: true
+
+        dual_image_block:
+            uri_prefix: /images/dual_image_block
+            upload_destination: "%kernel.project_dir%/public/images/dual_image_block"
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: true
+
+        dual_image_title_block:
+            uri_prefix: /images/dual_image_title_block
+            upload_destination: "%kernel.project_dir%/public/images/dual_image_title_block"
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: true
+        
+        dual_image_caption_block:
+            uri_prefix: /images/dual_image_caption_block
+            upload_destination: "%kernel.project_dir%/public/images/dual_image_caption_block"
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: true
+
+        triple_image_block:
+            uri_prefix: /images/triple_image_block
+            upload_destination: "%kernel.project_dir%/public/images/triple_image_block"
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: true
+
+        moodboard_1_block:
+            uri_prefix: /images/moodboard_1_block
+            upload_destination: "%kernel.project_dir%/public/images/moodboard_1_block"
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: true
+
+        moodboard_2_block:
+            uri_prefix: /images/moodboard_2_block
+            upload_destination: "%kernel.project_dir%/public/images/moodboard_2_block"
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: true
+        
+        persona_block:
+            uri_prefix: /images/persona_block
+            upload_destination: "%kernel.project_dir%/public/images/persona_block"
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: true

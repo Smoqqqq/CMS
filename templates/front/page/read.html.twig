@@ -1,0 +1,16 @@
+{% extends "front/layout.html.twig" %}
+
+{% block title %}{{ page.metaTitle }}
+{% endblock %}
+
+{% block description %}
+    {{ page.metaDescription }}
+{% endblock %}
+
+{% block content %}
+
+	<div class="container">
+        {% include "block/page-read.html.twig" %}
+    </div>
+
+{% endblock %}

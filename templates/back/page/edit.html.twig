@@ -1,0 +1,38 @@
+{% extends 'back/layout.html.twig' %}
+
+{% block title %}Hello pageController!
+{% endblock %}
+
+{% block content %}
+
+	<div class="container">
+		<h1>Modifier le page
+			{{ page.name }}</h1><hr>
+
+		<div class="mt-5"></div>
+
+		<a href="{{ path("app_page_read", { url: page.url }) }}" class="button" target="_blank"><span>Voir le page dans le front</span></a>
+
+		<div class="mt-5"></div>
+
+		{{ form_start(form) }}
+
+		{{ form_widget(form) }}
+
+		<button type="submit" class="button ms-auto">
+			<span>Enregistrer</span>
+		</button>
+
+		{{ form_end(form) }}
+
+		{% include "back/block/choose-block.html.twig" %}
+
+		<h2>Prévisualisation</h2>
+		<div class="preview">
+			<div class="bg-white p-3">
+				{% include "block/page-read.html.twig" with { adminMode: true } %}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

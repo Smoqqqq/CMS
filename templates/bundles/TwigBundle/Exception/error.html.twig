@@ -1,0 +1,11 @@
+{% extends "front/layout.html.twig" %}
+
+{% block content %}
+
+
+	<div id="error-page">
+		<h1>{{ status_code }}</h1>
+		<p>Oups, une erreur c'est produite sur le serveur. ({{ status_text }})</p>
+	</div>
+
+{% endblock %}

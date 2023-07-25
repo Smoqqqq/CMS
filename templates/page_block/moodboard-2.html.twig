@@ -1,0 +1,54 @@
+{% if adminMode is defined and adminMode %}
+	<div class="page-edit">
+		<a href="{{ path("app_back_page_block_edit", { id: bloc.id, blockClass: "Moodboard2Block", blockId: bloc.getCurrentBlock.id }) }}">
+			Modifier
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewbox="0 0 16 16">
+				<path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+			</svg>
+		</a>
+		{% include "block/page-bloc-action.html.twig" %}
+	</div>
+{% endif %}
+
+<div class="row moodboard">
+	<div class="col-md-4">
+		<img src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile1') }}" style="height: 554px;">
+		<img src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile2') }}" style="height: 577px">
+	</div>
+	<div class="col-md-4">
+		<img src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile3') }}" style="height: 358px">
+		<img src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile4') }}" style="height: 254px">
+		<img src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile5') }}" style="height: 506px">
+	</div>
+	<div class="col-md-4">
+		<img src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile6') }}" style="height: 762px">
+		<img src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile7') }}" style="height: 368px">
+	</div>
+	<div class="col-md-6 pe-md-2" style="margin-top: -2px">
+		<img src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile8') }}">
+	</div>
+	<div class="col-md-6 ps-md-1" style="margin-top: -2px">
+		<img src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile9') }}">
+	</div>
+</div>
+
+<div class="swiper">
+	<div class="swiper-wrapper">
+		<img class="swiper-slide" src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile1') }}">
+		<img class="swiper-slide" src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile2') }}">
+		<img class="swiper-slide" src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile3') }}">
+		<img class="swiper-slide" src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile4') }}">
+		<img class="swiper-slide" src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile5') }}">
+		<img class="swiper-slide" src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile6') }}">
+		<img class="swiper-slide" src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile7') }}">
+		<img class="swiper-slide" src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile8') }}">
+		<img class="swiper-slide" src="{{ vich_uploader_asset(bloc.currentBlock, 'imageFile9') }}">
+	</div>
+
+	<!-- If we need pagination -->
+	<div class="swiper-pagination"></div>
+
+	<!-- If we need navigation buttons -->
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+</div>

@@ -1,0 +1,7 @@
+<div class="row">
+    {% for column in row.columns %}
+        <div class="col-{{ column.breakpoint }}{{ column.size ? "-" ~ column.size : "" }}">
+            
+        </div>
+    {% endfor %}
+</div>

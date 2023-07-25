@@ -1,0 +1,7 @@
+<div class="page">
+	{% for bloc in page.blocks|sort((a, b) => a.position <=> b.position) %}
+		<div class="page-bloc" id="{{ bloc.id }}-{{ bloc.getCurrentBlock.id }}">
+			{% include "page_block/" ~ bloc.getCurrentBlock.template ~ ".html.twig" %}
+		</div>
+	{% endfor %}
+</div>
